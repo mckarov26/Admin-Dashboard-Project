@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
    
-    border: 1px solid rgb(35, 184, 53);
+    /* border: 1px solid green; */
     list-style: none;
     font-family:Arial, Helvetica, sans-serif;
     
@@ -14,8 +14,10 @@
     grid-template-rows: auto 1fr;
 
     height: 100vh;
+    max-width: 100vw;
     resize: both;
     overflow: auto;
+    overflow-x: hidden;
    
 }
 
@@ -30,31 +32,31 @@ a {
     grid-row: 1 / 3;
 
     padding: 20px ;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     background-color: rgb(50, 142, 233);
     color: white;
     width: 250px;
-    height: 100vh;       
-
+    /* height: 100vh;        */
 }
 #sidebar ul li a:hover {
-    color: hsl(241, 83%, 30%);
+    color: rgba(240, 178, 52, 0.985);
+    
    
 }
 #sidebar ul li a:active {
-    color: hsl(241, 83%, 60%);
+    color: rgb(15, 13, 140);
    
 }
 
 #sidebar > p {
     padding-top: 15px;
-    margin-bottom: 50px;
-    font-size: 20px;
+    margin-bottom: 60px;
+    font-size: 25px;
  
 }
 #dashboard {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 
@@ -71,7 +73,7 @@ a {
 #dashboard > li > a > i,
 #options > li > a > i  {
     margin-right: 20px;
-    font-size: 15px;
+    font-size: 21px;
 }
 
 
@@ -143,14 +145,17 @@ a {
 
 }
 #second-container > #username {
-    margin-right: 400px;
-    width: 245px;
+    margin-right: 370px;
+    width: 300px;
 
 }
 
 #username {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 30px;
+}
+#username > p > span {
+    font-size: 20px;
 }
 #second-container > #new-upload-share {
     display: flex;
@@ -169,10 +174,12 @@ a {
 }
 
 #second-container > #new-upload-share > div:hover {
-    background-color:  hsl(241, 83%, 30%);
+    background-color: rgba(240, 178, 52, 0.985);
+
 }
 #second-container > #new-upload-share > div:active {
-    background-color:  hsl(241, 83%, 60%);
+    background-color:  rgb(15, 13, 140);
+    
 }
 
 
@@ -181,10 +188,82 @@ a {
     background-color: rgba(242, 236, 236, 0.997);
 
     display: grid;  
-
     grid-template-columns: 3fr 1fr;
+    width: 100wh;
 
 
 }
+#main-content > div > h3 {
+    font-size: 24px;
+    padding: 40px 20px 10px;
+   
+}
 
-#main-content > 
+#your-projects {
+
+  
+    padding: 0px 30px 20px;
+    
+    display: grid;
+
+
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+
+}
+#your-projects > div {
+    border: 1px solid black;
+    background-color: white;
+    padding: 20px 30px;
+    
+
+    border-radius: 10px;
+    border: none;
+
+
+    box-shadow: -10px 0px 0px 0px rgba(240, 178, 52, 0.985);
+    position: relative;  
+    overflow: visible;
+}
+#your-projects > div > h3 {
+
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#your-projects > div > p {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+
+}
+#your-projects > div > div {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    font-size: 24px;
+    margin: 10px 0px;
+
+    
+}
+
+
+
+#your-projects > div > div > div:hover {
+    color: rgba(240, 178, 52, 0.985);
+    animation: wiggle 0.5s ease-in-out infinite;
+    cursor: pointer;
+    
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+#your-projects > div > div > div:active {
+    color: rgb(15, 13, 140);
+}
